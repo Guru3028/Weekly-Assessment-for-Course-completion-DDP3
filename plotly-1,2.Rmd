@@ -1,0 +1,30 @@
+---
+title: "Peer graded assessment for week-3 DDP"
+author: "Guru Teja"
+date: "07/11/2020"
+output: html_document
+---
+
+##Alterations to few attributes of the vehicle with reference to miles per gallon
+
+
+
+```{r}
+library(plotly)
+data(mtcars)
+head(mtcars)
+```
+```{r}
+plot_ly(mtcars) %>%
+    add_trace(x = ~mpg, y = ~cyl, type="scatter", mode = "markers",name = "Circular tubes", legendgroup = "circular tube", 
+              marker = list(color = "#FF7F50")) %>%
+    add_trace(x = ~mpg, y = ~gear, type="scatter", mode = "markers",
+              name = "gearwheel", legendgroup = "gearwheel", 
+              marker = list(color = "#3399FF")) %>%
+    add_trace(x = ~mpg, y = ~carb, type="scatter", mode = "markers",
+              name = "carbureator", legendgroup = "carbureator", 
+              marker = list(color = "#33FF33")) 
+```
+
+
+Scatter plots are obtained for the considered information regarding vehicle attributes and their altercations with reference to the amount of fuel consumed for an estimated or projected distance travelled. we have named them cuboid,cubicle and trapezoid and represented  them with blue red and green in some random order. the inference can be made as x axis denotes miles per gallon and y axis denotes cyl. From the plot we can see that the concentration of trapezoids or blue dots is more encompassed from 1 to 4 cyl on y axis whereas on x axis it is more from 10 to 35 miles per gallon. Like the concentartions of the green dots i.e cubicles is from 3 to 5 cyl on y axis and on x axis it also follows the same range as that of trapezoids which is 10 to 35 miles per gallon. finally the scatter of red plots is from 6 to 8 but none are present in between but on the extreme values which are 6 and 8.on the y axis they scatter from 10 to appproximately 22.5. A little remainder to note is the colors have been changed to coral, blue and green. also the names habe been changed to circular cylinder, gearwheels and carbureator and their repsctive plots have been obtained.
